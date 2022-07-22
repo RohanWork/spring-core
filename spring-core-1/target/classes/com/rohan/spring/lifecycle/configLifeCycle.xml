@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans 
+
+xmlns="http://www.springframework.org/schema/beans" 
+xmlns:p="http://www.springframework.org/schema/p" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns:context="http://www.springframework.org/schema/context"
+xsi:schemaLocation="http://www.springframework.org/schema/beans 
+					https://www.springframework.org/schema/beans/spring-beans.xsd
+					http://www.springframework.org/schema/context
+					http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!--  <context:annotation-config />  -->
+	
+	<bean class="com.rohan.spring.lifecycle.Samosa" name="s1" 
+	init-method="init" destroy-method="destroy">
+		<property name="price" value="15.0"/>
+	</bean>
+	
+	
+	<bean class="com.rohan.spring.lifecycle.Pepsi" name="p1">
+		<property name="price" value="35.0" />
+	</bean>
+	
+	<bean class="com.rohan.spring.lifecycle.Example" name="e1">
+		<property name="subject" value="Marathi" />
+	</bean>
+	
+	<bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor" />
+
+</beans>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans 
+
+xmlns="http://www.springframework.org/schema/beans" 
+xmlns:p="http://www.springframework.org/schema/p" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns:context="http://www.springframework.org/schema/context"
+xsi:schemaLocation="http://www.springframework.org/schema/beans 
+					https://www.springframework.org/schema/beans/spring-beans.xsd
+					http://www.springframework.org/schema/context
+					http://www.springframework.org/schema/context/spring-context.xsd">
+
+	
+<bean class="com.rohan.spring.collection.Employee" name="emp1">
+	<property name="name" value="Rohan Katare" />
+	<property name="phones">
+		<list>
+			<value>000000000</value>
+			<value>000000001</value>
+			<null/>
+		</list>
+	</property>
+	<property name="address">
+		<set>
+			<value>Sangli</value>
+			<value>Ashta</value>
+		</set>
+	</property>
+	<property name="cources">
+		<map>
+			<entry key="Java" value="4D" />
+			<entry key="Spring" value="2D" />
+		</map>
+	</property>
+</bean>
+
+</beans>
